@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Alice Johnson",
+      "designation": "Software Engineer",
+      "department": "IT",
+      "salary": 75000,
+      "profileImage": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "name": "Bob Smith",
+      "designation": "Project Manager",
+      "department": "Operations",
+      "salary": 90000,
+      "profileImage": "https://randomuser.me/api/portraits/men/46.jpg"
+    },
+    {
+      "name": "Clara Adams",
+      "designation": "Data Analyst",
+      "department": "Analytics",
+      "salary": 70000,
+      "profileImage": "https://randomuser.me/api/portraits/women/50.jpg"
+    }
+  ]
+  

@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Wireless Headphones",
+      "price": 7999,
+      "image": "https://via.placeholder.com/150?text=Headphones"
+    },
+    {
+      "name": "Smartwatch",
+      "price": 12999,
+      "image": "https://via.placeholder.com/150?text=Smartwatch"
+    },
+    {
+      "name": "Gaming Mouse",
+      "price": 2499,
+      "image": "https://via.placeholder.com/150?text=Gaming+Mouse"
+    }
+  ]
+  

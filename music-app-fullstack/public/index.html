@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎶 Music Directory 🎶</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">🎵 Music Directory 🎵</h1>
+
+  <!-- Total Songs -->
+  <p id="total-songs" class="text-center"></p>
+
+  <!-- Song Table -->
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Song Name</th>
+        <th>Film</th>
+        <th>Music Director</th>
+        <th>Singer</th>
+        <th>Actor</th>
+        <th>Actress</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="song-table-body">
+    </tbody>
+  </table>
+
+  <!-- Add New Song -->
+  <h2 class="mt-5">➕ Add New Song</h2>
+  <form id="add-song-form" class="row g-3">
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="songname" placeholder="Song Name" required>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="film" placeholder="Film" required>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="music_director" placeholder="Music Director" required>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="singer" placeholder="Singer" required>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="actor" placeholder="Actor">
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="actress" placeholder="Actress">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success w-100">Add Song</button>
+    </div>
+  </form>
+
+  <!-- Filter Section -->
+  <h2 class="mt-5">🔎 Filter Songs</h2>
+  <form id="filter-form" class="row g-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="filter-md" placeholder="Music Director Name">
+    </div>
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="filter-singer" placeholder="Singer Name">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary w-100">Filter</button>
+    </div>
+  </form>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

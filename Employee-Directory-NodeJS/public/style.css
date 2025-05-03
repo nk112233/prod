@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .employee-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .employee-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .employee-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .employee-card h3 {
+    margin: 10px 0 5px 0;
+  }
+  
+  .employee-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikunj Kadu - Mobile Portfolio</title>
+
+    <!-- jQuery Mobile CSS + JS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .center {
+            text-align: center;
+        }
+        .skill-list span {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 12px;
+            background: #007bff;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Home -->
+<div data-role="page" id="home">
+  <div data-role="header" data-position="fixed">
+    <h1>Nikunj Kadu</h1>
+  </div>
+
+  <div role="main" class="ui-content center">
+    <img src="images/zoro-pfp-1.jpg" alt="Profile Photo" style="width:150px;height:150px;">
+    <h2>Hi, I am Nikunj</h2>
+    <p>MERN Stack Developer</p>
+
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div data-role="footer" data-position="fixed" class="center">
+    <small>© 2025 Nikunj Kadu</small>
+  </div>
+</div>
+
+<!-- About -->
+<div data-role="page" id="about">
+  <div data-role="header" data-position="fixed">
+    <h1>About Me</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext"></a>
+  </div>
+
+  <div role="main" class="ui-content">
+    <p>I am a motivated and versatile individual, passionate about web development and learning new technologies. I strive to deliver high-quality results with a positive attitude and a growth mindset.</p>
+  </div>
+</div>
+
+<!-- Skills -->
+<div data-role="page" id="skills">
+  <div data-role="header" data-position="fixed">
+    <h1>Skills</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext"></a>
+  </div>
+
+  <div role="main" class="ui-content center">
+    <div class="skill-list">
+      <span>JavaScript</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>ReactJS</span>
+      <span>Python</span>
+      <span>MongoDB</span>
+      <span>NodeJS</span>
+      <span>Github</span>
+    </div>
+  </div>
+</div>
+
+<!-- Projects -->
+<div data-role="page" id="projects">
+  <div data-role="header" data-position="fixed">
+    <h1>Projects</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext"></a>
+  </div>
+
+  <div role="main" class="ui-content">
+
+    <div data-role="collapsible-set">
+      
+      <div data-role="collapsible">
+        <h4>PICT-Connect</h4>
+        <img src="images/pict-connect.png" alt="PICT-Connect">
+        <p><a href="https://pict-connect.onrender.com/" target="_blank">Visit Website</a></p>
+        <p>Students can ask questions, share experiences, and connect with college mates. Event updates are also shared.</p>
+      </div>
+
+      <div data-role="collapsible">
+        <h4>MHT-CET College Predictor</h4>
+        <img src="images/mht-cet.png" alt="MHT-CET">
+        <p><a href="https://mht-cet-college-predictor.vercel.app/" target="_blank">Visit Website</a></p>
+        <p>Predict colleges based on MHT-CET rank and filters like caste, city, college name.</p>
+      </div>
+
+      <div data-role="collapsible">
+        <h4>Clash MCQ Platform</h4>
+        <img src="images/clash.png" alt="Clash">
+        <p>MCQ based coding competition platform using React and Django. Real-time data fetching and responsive design.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Education -->
+<div data-role="page" id="education">
+  <div data-role="header" data-position="fixed">
+    <h1>Education</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext"></a>
+  </div>
+
+  <div role="main" class="ui-content">
+    <h2>Pune Institute Of Computer Technology</h2>
+    <p>B.E. - Information Technology (2022-2026)</p>
+    <p>Grade: 9.31 GPA</p>
+    <p>Currently in Third Year</p>
+    <img src="images/pict.png" alt="PICT Logo" style="width:100px;">
+  </div>
+</div>
+
+<!-- Contact -->
+<div data-role="page" id="contact">
+  <div data-role="header" data-position="fixed">
+    <h1>Contact Info</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext"></a>
+  </div>
+
+  <div role="main" class="ui-content center">
+    <p><i class="fa fa-envelope"></i> nk112233@gmail.com</p>
+    <p><i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/nikunjkadu/" target="_blank">LinkedIn</a></p>
+    <p><i class="fa fa-github"></i> <a href="https://github.com/nk112233" target="_blank">GitHub</a></p>
+  </div>
+</div>
+
+</body>
+</html>

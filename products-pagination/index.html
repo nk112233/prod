@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Product Catalog</h1>
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>Product Image</th>
+        <th>Product</th>
+        <th>Price (INR ₹)</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="productBody">
+      <!-- Products will be dynamically inserted here -->
+    </tbody>
+  </table>
+
+  <div class="pagination" id="pagination">
+    <button onclick="prevPage()">Previous</button>
+    <span id="pageInfo"></span>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

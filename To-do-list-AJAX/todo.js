@@ -81,7 +81,7 @@ function deleteTask(index) {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-      fakeServerDB.splice(index, 1);
+      fakeServerDB.splice(index,1);
       saveToLocalStorage();
       renderTasks();
     }

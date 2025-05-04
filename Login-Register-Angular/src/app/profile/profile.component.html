@@ -1,9 +1,18 @@
-<!-- profile.component.html -->
-<h2>User Profile</h2>
-<p><strong>Name:</strong> {{ user.name }}</p>
-<p><strong>Email:</strong> {{ user.email }}</p>
-<p><strong>Username:</strong> {{ user.username }}</p>
-<p><strong>Mobile:</strong> {{ user.mobile }}</p>
-<p><strong>City:</strong> {{ user.city }}</p>
-<p><strong>DOB:</strong> {{ user.dob }}</p>
-<button (click)="logout()">Logout</button>
+<div *ngIf="user; else unauthorized" class="profile-container">
+    <h2>Welcome, {{ user.name }}</h2>
+  
+    <div class="profile-details">
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>City:</strong> {{ user.city }}</p>
+    </div>
+  
+    <button (click)="logout()">Logout</button>
+  </div>
+  
+  <ng-template #unauthorized>
+    <div class="unauth-container">
+      <p>You are not authorized to view this page.</p>
+      <a routerLink="/login">Go to Login</a>
+    </div>
+  </ng-template>
+  

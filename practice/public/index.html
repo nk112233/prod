@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <div id = "user-ls"></div>
+
+    <script>
+      fetch("/api/user")
+      .then(res => res.json())
+      .then(users => {
+        
+        const ls = document.getElementById('user-ls');
+        ls.innerHTML = '';
+        const ulls = document.createElement('ul');  
+        users.forEach(user => {
+            let litag = document.createElement('li');
+            litag.innerHTML = `
+        <li>${user.name}</li>
+        `
+        ulls.appendChild(litag);
+        });
+        console.log("working");
+        
+        ls.appendChild(ulls);
+
+      })
+    </script>
+</body>
+</html>

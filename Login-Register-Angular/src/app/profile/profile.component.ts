@@ -12,18 +12,17 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, FormsModule],
 })
 export class ProfileComponent {
-  user: any;
+  user: any = null;
 
-  constructor(private auth: AuthService, private router: Router) {
-    this.user = this.auth.getCurrentUser();
-    if (!this.user) {
-      alert('Unauthorized');
-      this.router.navigate(['/']);
+  constructor(private router: Router) {
+    const storedUser = localStorage.getItem('currentUser');
+    if (storedUser) {
+      this.user = JSON.parse(storedUser);
     }
   }
 
   logout() {
-    this.auth.logout();
+    localStorage.removeItem('currentUser');
     this.router.navigate(['/']);
   }
 }

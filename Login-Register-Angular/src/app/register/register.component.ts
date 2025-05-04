@@ -12,17 +12,24 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, FormsModule],
 })
 export class RegisterComponent {
-  user = { name: '', email: '', username: '', password: '', city: '', dob: '', mobile: '' };
+  user = {
+    name: '',
+    email: '',
+    password: '',
+    city: '',
+    username: '',
+  };
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private router: Router) {}
 
   register() {
-    const result = this.auth.register(this.user);
-    if (result.success) {
-      alert('Registration successful!');
-      this.router.navigate(['/']);
-    } else {
-      alert(result.message);
-    }
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const exists = users.find((u: any) => u.username === this.user.username);
+    if (exists) return alert('User already exists!');
+
+    users.push(this.user);
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Registered successfully!');
+    this.router.navigate(['/']);
   }
 }

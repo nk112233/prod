@@ -1,28 +1,37 @@
-// components/login.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.services';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-login',
   templateUrl: './login.component.html',
-  imports: [CommonModule, FormsModule],
+  styleUrls: ['./login.component.css'],
+  imports: [CommonModule, FormsModule , RouterModule],
 })
 export class LoginComponent {
-  username = '';
-  password = '';
+  credentials = {
+    username: '',
+    password: ''
+  };
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private router: Router) {}
 
   login() {
-    const result = this.auth.login(this.username, this.password);
-    if (result.success) {
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find((u: any) =>
+      u.username === this.credentials.username &&
+      u.password === this.credentials.password
+    );
+
+    if (user) {
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      alert('Login successful!');
       this.router.navigate(['/profile']);
     } else {
-      alert('Invalid credentials');
+      alert('Invalid credentials!');
     }
   }
 }

@@ -126,7 +126,7 @@ app.delete("/api/deleteSong" , async(req  ,res) => {
 });
 
 
-app.get("api/add" , async(req , res) => {
+app.get("/api/add" , async(req , res) => {
     const addSong = new songDetails(req.body);
     await addSong.save();
 });
